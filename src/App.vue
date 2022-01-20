@@ -1,20 +1,45 @@
 <template>
   <div id="app">
     <h1>TO DO:</h1>
-    <ToDo/>
-    <ToDo/>
-    <ToDo/>
-    <ToDo/>
+    <ToDo textContent="" :done="false" />
+    <ToDoList :dataList="dataList" />
   </div>
 </template>
 
 <script>
 import ToDo from "./components/ToDo";
+import ToDoList from "./components/ToDoList.vue";
 
 export default {
   name: "App",
   components: {
-    ToDo
+    ToDo, ToDoList
+  },
+  data() {
+    return {
+      dataList: [
+        {
+          text: 'get up at 10 am',
+          done: false,
+        },
+        {
+          text: 'visit God in prayer',
+          done: true,
+        },
+        {
+          text: 'code a few lines',
+          done: true,
+        },
+        {
+          text: 'end the day',
+          done: false,
+        },
+        {
+          text: 'repeat the same',
+          done: true,
+        }
+      ]
+    }
   }
 };
 </script>

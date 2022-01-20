@@ -7,14 +7,16 @@
 </template>
 
 <script>
-const data = {
-  message: "",
-  completed: false
-};
-
 export default {
+  props: {
+    done: Boolean,
+    textContent: String,
+  },
   data() {
-    return data;
+    return {
+      message: this.textContent,
+      completed: this.done ? this.done : false
+    }
   }
 };
 </script>
@@ -35,7 +37,7 @@ export default {
   position: absolute;
   right: 0px;
   top: 20px;
-  color: #green;
+  color: "#green";
 }
 
 .todo {
