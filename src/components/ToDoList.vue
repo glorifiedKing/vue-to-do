@@ -1,7 +1,7 @@
 <template>
-  <div class="list-items">
-      <ToDo  v-for="item in dataList" :key="item.text" :textContent="item.text" :done="item.done" />
-  </div>
+    <div class="list-items">
+        <ToDo  v-for="item in dataList" :key="item.text" :textContent="item.text" :done="item.done" />
+    </div>
 </template>
 
 <script>
